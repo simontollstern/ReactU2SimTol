@@ -9,7 +9,7 @@ class Card extends Component{
     this.state = { toggled: false }
   }
 
-  // Toggles the content
+  // Toggles tehe info if present
   toggle = () => {
     this.setState({ toggled: !this.state.toggled });
   }

@@ -5,6 +5,7 @@ import style from './UserList.module.css';
 // The list containing User component, also notifies Dashboard to toggle the color of User
 class UserList extends Component{
 
+  // Sends an event to Dashboard to toggle active/inactive users
   toggleUsers = () => {
     this.props.onToggleUsers();
   }

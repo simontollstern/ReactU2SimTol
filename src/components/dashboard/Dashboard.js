@@ -23,6 +23,7 @@ class Dashboard extends Component{
     }
   }
 
+  // Toggle between active and inactive users
   toggleUsers = () => {
     this.setState({ usersToggled: !this.state.usersToggled });
   }
@@ -56,7 +57,7 @@ class Dashboard extends Component{
           <UserList onToggleUsers={this.toggleUsers} onToggleColor={this.toggleColor} usersToggled={this.state.usersToggled}>
             {this.state.users.map((user, key) => {
               if(user.isActive === this.state.usersToggled){
-                return <Link key={key} to={`/user/${user.name}`}><User id={user.id} name={user.name} usersToggled={this.state.usersToggled} colorToggled={this.state.colorToggled} />
+                return <Link key={key} to={`/user/${user.name}`}><User id={user.id} name={user.name} usersToggled={this.state.usersToggled} colorToggled={this.state.colorToggled} /></Link>
               }
             })}
           </UserList>

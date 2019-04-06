@@ -5,6 +5,7 @@ import LoginScreen from '../../screens/login/LoginScreen';
 import UserScreen from '../../screens/user/UserScreen';
 import style from './Navigation.module.css';
 
+// Component providing navigations links and rendering screens
 class Navigation extends Component{
   render(){
     return(

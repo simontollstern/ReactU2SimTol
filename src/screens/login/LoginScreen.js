@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import Card from '../../components/card/Card';
 import style from './LoginScreen.module.css';
 
+// Login page (/login)
 class LoginScreen extends Component{
+
+  // Redirects to the main page (/)
   redirect = (e) => {
     e.preventDefault();
     this.props.history.push('/');
