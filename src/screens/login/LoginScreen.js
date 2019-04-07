@@ -6,10 +6,10 @@ import style from './LoginScreen.module.css';
 // Login page (/login)
 class LoginScreen extends Component{
 
-  // Redirects to the main page (/)
+  // Redirects to the main page (/dashboard)
   redirect = (e) => {
     e.preventDefault();
-    this.props.history.push('/');
+    this.props.history.push('/dashboard');
   }
 
   render(){

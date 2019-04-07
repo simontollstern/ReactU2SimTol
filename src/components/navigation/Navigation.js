@@ -13,14 +13,17 @@ class Navigation extends Component{
         <Router>
           <nav>
             <div>
-              <NavLink activeClassName={style.active} exact to="/">Dashboard</NavLink>
+              <NavLink activeClassName={style.active} exact to="/dashboard">Dashboard</NavLink>
               <NavLink activeClassName={style.active} to="/login">Login</NavLink>
               <NavLink activeClassName={style.active} to="/user">User</NavLink>
             </div>
           </nav>
 
           <div className={style.routewrapper}>
-            <Route path='/' exact component={DashboardScreen} />
+            <Switch>
+              <Redirect from='/' exact to='/login' />
+            </Switch>
+            <Route path='/dashboard' component={DashboardScreen} />
             <Route path='/login' component={LoginScreen} />
             <Switch>
               <Redirect from='/user' exact to='/login' />

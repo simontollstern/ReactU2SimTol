@@ -59,6 +59,7 @@ class Dashboard extends Component{
               if(user.isActive === this.state.usersToggled){
                 return <Link key={key} to={`/user/${user.name}`}><User id={user.id} name={user.name} usersToggled={this.state.usersToggled} colorToggled={this.state.colorToggled} /></Link>
               }
+              return null; // This prevents a warning complaining about nothing being returned
             })}
           </UserList>
         </Card>

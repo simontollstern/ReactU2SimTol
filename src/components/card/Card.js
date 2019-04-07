@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import style from './Card.module.css';
 
-// Wrapper for content that can be toggled to be shown or hidden
+// Wrapper for other components with (optional) info that can be toggled to be shown or hidden
 class Card extends Component{
   constructor(props){
     super(props);
     this.state = { toggled: false }
   }
 
-  // Toggles tehe info if present
+  // Toggles the info if present
   toggle = () => {
     this.setState({ toggled: !this.state.toggled });
   }
